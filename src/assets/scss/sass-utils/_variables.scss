@@ -1,6 +1,8 @@
 :root {
-	--burger-default: #222;
-	--burger-active: #222;
+	--primary: #f2f735;
+	--white: #fff;
+	--black: #121317;
+	--black-100: #1e1f24;
 }
 
 $breakpoints: (
@@ -11,7 +13,3 @@ $breakpoints: (
 	'xl': 1280px,
 	'xxl': 1440px,
 );
-
-$burgerIndex: 4;
-$mobileMenuIndex: 3;
-$overlayIndex: 2;

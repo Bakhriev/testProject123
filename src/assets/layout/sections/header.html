@@ -1,25 +1,26 @@
 <header class="header">
-	<div class="header__container container">
-		<a href="#" class="logo"><img src="" alt="logo" /></a>
-
-		<div class="mobile-menu">
-			<div class="header__content">
-				<nav>
-					<ul class="menu">
-						<li>
-							<a href="#" class="menu__link border-bottom-line">Home</a>
-						</li>
-						<li>
-							<a href="#" class="menu__link border-bottom-line">About</a>
-						</li>
-						<li>
-							<a href="#" class="menu__link border-bottom-line">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-		@include('../components/burger.html')
+	<div class="header__container">
+		<svg class="logo" aria-hidden="true">
+			<use href="./assets/img/svg/sprite.svg#logo"></use>
+		</svg>
+		<nav>
+			<ul class="menu header__menu list-reset">
+				<li>
+					<a href="#" class="menu__link border-bottom-line active">Home</a>
+				</li>
+				<li>
+					<a href="#" class="menu__link border-bottom-line">About</a>
+				</li>
+				<li>
+					<a href="#" class="menu__link border-bottom-line">Service</a>
+				</li>
+				<li>
+					<a href="#" class="menu__link border-bottom-line">Skills</a>
+				</li>
+				<li>
+					<a href="#" class="menu__link border-bottom-line">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </header>

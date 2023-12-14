@@ -1,69 +1,32 @@
 .header {
-	padding: 20px 0;
-
-	// .header__container
-
+	padding: 15px 0;
+	background-color: #1e1f24;
 	&__container {
+		max-width: 1530px;
+		padding: 0 15px;
+		margin: 0 auto;
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
-		gap: 20px;
 	}
 
-	&__content {
+	&__menu {
 		display: flex;
 		align-items: center;
-
-		@include breakpoint(md) {
-			flex-direction: column;
-		}
-	}
-}
-
-.mobile-menu {
-	&.active {
-		transform: translateX(0);
-	}
-
-	// Mobile Menu Styles
-	@include breakpoint(md) {
-		padding: 50px 15px;
-
-		position: fixed;
-		right: 0;
-		top: 0;
-		z-index: $mobileMenuIndex;
-		overflow-y: auto;
-		overflow-x: hidden;
-
-		max-width: 320px;
-		min-width: 300px;
-		width: 100%;
-		height: 100%;
-
-		transform: translateX(100%);
-		transition: transform 250ms ease-in-out;
-		background-color: #fff;
+		flex-wrap: wrap;
+		gap: 15px 30px;
 	}
 }
 
 .menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-
-	gap: 20px 20px;
-
-	@include breakpoint(md) {
-		flex-direction: column;
-	}
-
 	&__link {
 		text-decoration: none;
+		color: var(--white);
+		&.active {
+			&::before {
+				transform: scale(1);
+			}
+		}
 	}
 }

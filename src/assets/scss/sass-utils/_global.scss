@@ -6,19 +6,22 @@ body {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 	min-height: 100vh;
+
 	overflow: hidden;
 }
 
 .main {
-	flex: 1;
+	background-color: var(--black);
 }
 
 .logo {
 	display: block;
 	flex-shrink: 0;
+	width: 80px;
+	height: 30px;
 }
 
 .container {
@@ -42,22 +45,20 @@ body {
 		left: 0;
 		bottom: -6px;
 
-		height: 1px;
+		height: 2px;
 		width: 100%;
 
-		background: #000;
+		background-color: var(--primary);
 		border-radius: 5px;
 		transform: scaleX(0);
 		transition: transform 250ms ease-in-out;
 
-		// transform-origin: right bottom;
 		transform-origin: center;
 	}
 
 	@include hover {
 		&::before {
 			transform: scaleX(1);
-			// transform-origin: left bottom;
 		}
 	}
 }
@@ -88,4 +89,8 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.text-primary {
+	color: var(--primary);
 }
