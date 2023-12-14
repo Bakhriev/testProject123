@@ -60,10 +60,29 @@
 .btn--primary {
 	background-color: var(--primary);
 	color: var(--black);
+	border: 1px solid transparent;
+	transition:
+		background-color 300ms,
+		border 300ms,
+		color 300ms;
+	@include hover {
+		border: 1px solid var(--primary);
+		background-color: transparent;
+		color: var(--white);
+	}
 }
 
 .btn--secondary {
 	background-color: var(--black);
 	color: var(--white);
 	border: 1px solid var(--white);
+	transition:
+		background-color 300ms,
+		border 300ms,
+		color 300ms;
+	@include hover {
+		border: 1px solid transparent;
+		background-color: var(--primary);
+		color: var(--black);
+	}
 }
